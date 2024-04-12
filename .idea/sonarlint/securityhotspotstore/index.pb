@@ -44,3 +44,9 @@ F
 app/proguard-rules.pro,9\e\9e08934d811afe28fbc77aaa3c0d747b94348db9
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+i
+9app/src/main/java/com/brayandev/users_gse/app/UsersApp.kt,b\8\b826f6241209f58e2fa2984bdf6a6f619b5d26a5
+Å
+Qapp/src/main/java/com/brayandev/users_gse/ui/views/navigation/NavigationScreen.kt,8\4\84dc9393bcdedc911f309f6328dc7a36923821d0
+w
+Gapp/src/main/java/com/brayandev/users_gse/ui/views/navigation/Routes.kt,d\e\dee7d8ed6ea42bf56b64bcd0cb22ef014bf78746
