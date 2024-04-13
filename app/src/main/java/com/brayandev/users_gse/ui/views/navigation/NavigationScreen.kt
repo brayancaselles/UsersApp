@@ -8,6 +8,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.brayandev.users_gse.ui.views.splash.SplashScreen
+import com.brayandev.users_gse.ui.views.userDetail.UserDetailScreen
+import com.brayandev.users_gse.ui.views.userDetail.UserDetailViewModel
 import com.brayandev.users_gse.ui.views.users.UsersScreen
 import com.brayandev.users_gse.ui.views.users.UsersViewModel
 
@@ -26,6 +28,9 @@ fun NavigationScreen() {
         composable(
             Routes.UserDetail.route,
             arguments = listOf(navArgument(USER_ID) { type = NavType.IntType }),
-        ) {}
+        ) {
+            val viewModel = hiltViewModel<UserDetailViewModel>()
+            UserDetailScreen(viewModel = viewModel)
+        }
     }
 }

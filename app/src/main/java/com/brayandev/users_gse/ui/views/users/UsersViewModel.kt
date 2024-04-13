@@ -14,16 +14,16 @@ import javax.inject.Inject
 @HiltViewModel
 class UsersViewModel @Inject constructor(useCase: RequestUsersUseCase) : ViewModel() {
 
-    private val _state = mutableStateOf(UserUiState())
-    val state: MutableState<UserUiState> = _state
+    private val _state = mutableStateOf(UsersUiState())
+    val state: MutableState<UsersUiState> = _state
 
     init {
         viewModelScope.launch {
-            _state.value = UserUiState(isLoading = true)
+            _state.value = UsersUiState(isLoading = true)
             delay(2000)
             val users: List<UserItemModel> = useCase.invoke()
 
-            _state.value = UserUiState(isLoading = false, users)
+            _state.value = UsersUiState(isLoading = false, users)
         }
     }
 }

@@ -3,6 +3,7 @@ package com.brayandev.users_gse.ui.views.splash
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -14,6 +15,7 @@ import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.animateLottieCompositionAsState
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.brayandev.users_gse.R
+import com.brayandev.users_gse.ui.theme.Primary
 import com.brayandev.users_gse.ui.views.navigation.Routes
 import kotlinx.coroutines.delay
 
@@ -33,5 +35,6 @@ fun SplashScreen(navController: NavController) {
         verticalArrangement = Arrangement.Center,
     ) {
         LottieAnimation(composition = composition, progress = { progress })
+        CircularProgressIndicator(color = Primary)
     }
 }

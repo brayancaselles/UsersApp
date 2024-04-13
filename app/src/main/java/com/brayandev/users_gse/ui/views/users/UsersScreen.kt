@@ -34,12 +34,13 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.brayandev.users_gse.R
 import com.brayandev.users_gse.domain.model.UserItemModel
 import com.brayandev.users_gse.ui.theme.Primary
 import com.brayandev.users_gse.ui.theme.Second
@@ -63,7 +64,7 @@ fun UsersScreen(navController: NavController, viewModel: UsersViewModel) {
                         horizontalAlignment = Alignment.CenterHorizontally,
                     ) {
                         Text(
-                            text = "Usarios",
+                            text = stringResource(R.string.top_app_bar_user),
                             textAlign = TextAlign.Center,
                             fontWeight = FontWeight.Bold,
                             color = Primary,
@@ -99,7 +100,6 @@ fun UsersScreen(navController: NavController, viewModel: UsersViewModel) {
 fun UserItem(user: UserItemModel, navController: NavController) {
     val scope = rememberCoroutineScope()
     val tooltipState = rememberTooltipState(isPersistent = true)
-    val uriHandler = LocalUriHandler.current
 
     Card(
         modifier = Modifier
@@ -118,7 +118,7 @@ fun UserItem(user: UserItemModel, navController: NavController) {
             )
             Column {
                 Text(
-                    text = "Nombre: ${user.name}",
+                    text = stringResource(R.string.text_name, user.name),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier.padding(vertical = 2.dp, horizontal = 4.dp),
@@ -126,7 +126,7 @@ fun UserItem(user: UserItemModel, navController: NavController) {
                     color = Primary,
                 )
                 Text(
-                    text = "Email: ${user.email}",
+                    text = stringResource(R.string.text_email, user.email),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier.padding(vertical = 2.dp, horizontal = 4.dp),
@@ -138,14 +138,14 @@ fun UserItem(user: UserItemModel, navController: NavController) {
                 state = tooltipState,
                 tooltip = {
                     RichTooltip(
-                        title = { Text(text = "Website") },
+                        title = { Text(text = stringResource(R.string.text_website)) },
                         text = {
                             Text(text = user.website)
                         },
                         action = {
                             TextButton(onClick = { scope.launch { tooltipState.dismiss() } }) {
                                 Text(
-                                    text = "Cerrar",
+                                    text = stringResource(R.string.text_close),
                                 )
                             }
                         },

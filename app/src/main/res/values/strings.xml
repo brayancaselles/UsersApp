@@ -1,3 +1,21 @@
 <resources>
-    <string name="app_name">Users_gse</string>
+    <string name="app_name">Users App</string>
+    <string name="top_app_bar_user">Usarios</string>
+    <string name="text_name">Nombre: %1$s</string>
+    <string name="text_email">Email: %1$s</string>
+    <string name="text_website">Website</string>
+    <string name="text_close">Cerrar</string>
+    <string name="text_name_detail">"Nombre: "</string>
+    <string name="text_email_detail">"Email: "</string>
+    <string name="text_phone">"Teléfono: "</string>
+    <string name="text_website_detail">"Website: "</string>
+    <string name="text_address">"Dirección: "</string>
+    <string name="text_street">"- Calle: "</string>
+    <string name="text_suite">"- Suite: "</string>
+    <string name="text_city">"- Ciudad: "</string>
+    <string name="text_zip_code">"- Código postal: "</string>
+    <string name="text_company">"Compañia: "</string>
+    <string name="text_name_company">"- Nombre: "</string>
+    <string name="text_bs">"- Bs: "</string>
+    <string name="text_catchPhrase">"- Frase de captura: "</string>
 </resources>
